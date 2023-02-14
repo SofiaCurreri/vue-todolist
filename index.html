@@ -35,7 +35,12 @@
   </head>
 
   <body>
-    <div class="container" id="todolist">{{message}}</div>
+    <div class="container mt-5" id="todolist">
+      <ul id="stampaLista" v-for="item in list">
+        <li v-if="checkToDo()">{{item.text}}</li>
+        <li class="doneToDo" v-else>{{item.text}}</li>
+      </ul>
+    </div>
     <!-- COLLEGAMENTO FILE JS -->
     <script type="text/javascript" src="./js/app.js"></script>
   </body>
