@@ -38,6 +38,7 @@
     <div class="container mt-5" id="todolist">
       <div class="input-group mb-3">
         <input
+          @keyUp.enter="addToDo()"
           v-model="newToDo.text"
           type="text"
           class="form-control"
@@ -61,7 +62,7 @@
           v-for="(item, index) in list"
           :class="(item.done) ? 'doneToDo' : ' ' "
         >
-          {{item.text}}
+          <span @click="doneTodo(index)">{{item.text}}</span>
 
           <button
             type="button"

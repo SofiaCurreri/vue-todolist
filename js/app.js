@@ -59,6 +59,12 @@ const app = createApp({
         done: false,
       };
       this.list.push(newToDoCopy);
+
+      this.newToDo.text = "";
+    },
+
+    doneTodo(index) {
+      this.list[index].done = !this.list[index].done;
     },
   },
 });
