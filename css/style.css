@@ -1,3 +1,7 @@
 .doneToDo {
   text-decoration: line-through;
 }
+
+li span {
+  cursor: pointer;
+}
