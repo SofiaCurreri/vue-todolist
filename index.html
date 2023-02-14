@@ -39,11 +39,19 @@
       <h1>To Do List</h1>
       <ul class="list-group mt-4" id="stampaLista">
         <li
-          class="list-group-item"
-          v-for="item in list"
+          class="list-group-item d-flex"
+          v-for="(item, index) in list"
           :class="(item.done) ? 'doneToDo' : ' ' "
         >
           {{item.text}}
+
+          <button
+            type="button"
+            class="btn btn-danger ms-auto"
+            @click="removeToDo(index)"
+          >
+            <i class="fa fa-times"></i>
+          </button>
         </li>
       </ul>
     </div>
