@@ -36,6 +36,24 @@
 
   <body>
     <div class="container mt-5" id="todolist">
+      <div class="input-group mb-3">
+        <input
+          v-model="newToDo.text"
+          type="text"
+          class="form-control"
+          placeholder="New ToDo"
+          aria-label="New ToDo"
+          aria-describedby="button-addon2"
+        />
+        <button
+          @click="addToDo()"
+          class="btn btn-outline-secondary"
+          type="button"
+          id="button-addon2"
+        >
+          Add ToDo
+        </button>
+      </div>
       <h1>To Do List</h1>
       <ul class="list-group mt-4" id="stampaLista">
         <li

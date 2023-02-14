@@ -40,12 +40,25 @@ const app = createApp({
           done: true,
         },
       ],
+
+      newToDo: {
+        text: "",
+        done: false,
+      },
     };
   },
 
   methods: {
     removeToDo(index) {
       this.list.splice(index, 1);
+    },
+
+    addToDo() {
+      const newToDoCopy = {
+        text: this.newToDo.text, //o scrivevi solo ...this.newToDo per copiarlo
+        done: false,
+      };
+      this.list.push(newToDoCopy);
     },
   },
 });
