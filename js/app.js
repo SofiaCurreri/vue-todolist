@@ -42,18 +42,6 @@ const app = createApp({
       ],
     };
   },
-
-  computed: {
-    checkToDo() {
-      const doneToDo = this.list.filter((item) => {
-        if (item.done) {
-          return true;
-        }
-      });
-    },
-  },
 });
-
-const stampaToDo = document.getElementById("stampaLista");
 
 app.mount("#todolist");

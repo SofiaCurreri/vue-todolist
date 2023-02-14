@@ -36,9 +36,15 @@
 
   <body>
     <div class="container mt-5" id="todolist">
-      <ul id="stampaLista" v-for="item in list">
-        <li v-if="checkToDo()">{{item.text}}</li>
-        <li class="doneToDo" v-else>{{item.text}}</li>
+      <h1>To Do List</h1>
+      <ul class="list-group mt-4" id="stampaLista">
+        <li
+          class="list-group-item"
+          v-for="item in list"
+          :class="(item.done) ? 'doneToDo' : ' ' "
+        >
+          {{item.text}}
+        </li>
       </ul>
     </div>
     <!-- COLLEGAMENTO FILE JS -->
